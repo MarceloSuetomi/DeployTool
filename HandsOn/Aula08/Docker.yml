@@ -1,0 +1,7 @@
+# Docker.yml
+name: Docker
+repo: alskdfjalj
+commands:
+  - apt-get clean
+  - apt-get update
+  - apt-get -f install -y

@@ -1,0 +1,13 @@
+# TerminusPlaybook.yml
+name: Terminus9
+repo: https://github.com/AlissonMMenezes/Terminus.git
+commands:
+  - apt-get clean
+  - apt-get update
+  - apt-get -f install -y
+  - apt-get install python python-setuptools python-dev sqlite3 git -y
+  - git clone https://github.com/AlissonMMenezes/Terminus.git /srv/Terminus
+  - easy_install pyramid_mailer
+  - bash -c "cd /srv/Terminus ; python setup.py install"
+  - bash -c "cd /srv/Terminus ; nohup pserve development.ini --reload --daemon &"
+
